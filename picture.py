@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 
 image = cv2.imread("tsumiki.png")
 image = cv2.cvtColor(image , cv2.COLOR_RGB2BGR)
+image2 = cv2.cvtColor(image , cv2.COLOR_RGB2HLS)
 
 def image_show(image , title):
     plt.imshow(image)
@@ -11,4 +12,4 @@ def image_show(image , title):
     plt.axis("off")
     plt.show()
 
-image_show(image , 'tsumiki')
+image_show(image2 , 'tsumiki2')
